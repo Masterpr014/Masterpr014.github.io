@@ -3,19 +3,24 @@ let ataqueEnemigo
 let vidasEnemigo = 3
 let vidasJugador = 3
 
+
+
 function aleatorio(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min)
 }
 function seleccionarMascotaJugador() {
     let sectionSelecionarAtaque = document.getElementById("seleccionar-ataque")
-    sectionSelecionarAtaque.style.display = "block"
+    sectionSelecionarAtaque.style.display = "flex"
 
     let sectionSelecionarMascota = document.getElementById("seleccionar-mascota")
     sectionSelecionarMascota.style.display = "none"
 
     let inputHipodoge = document.getElementById("hipodoge")
+    inputHipodoge.style.display = "none"
     let inputCapipepo = document.getElementById("capipepo")
+    inputCapipepo.style.display = "none"
     let inputRatigueya = document.getElementById("ratigueya")
+    inputRatigueya.style.display = "none"
     let spanMascotaJugador = document.getElementById("mascota-jugador")
     
     
@@ -85,22 +90,28 @@ function ataqueTierra() {
 
 
 function crearMensaje() {
-    let seccionMensajes = document.getElementById("mensajes")
-    
-    let parrafo = document.createElement("p")
-    parrafo.innerHTML = "Tu mascota ataco con " + ataqueJugador +  " la mascota del enemigo ataco con " + ataqueEnemigo + " - " + resultado
+    let seccionMensajes = document.getElementById("resultado")
+    let ataquesJugador = document.getElementById("ataques-jugador")
+    let ataquesEnemigo = document.getElementById("ataques-enemigo")
 
-    seccionMensajes.appendChild(parrafo)
+    let nuevoAtaqueJugador = document.createElement("p")
+    let nuevoAtaqueEnemigo = document.createElement("p")
+
+    seccionMensajes.innerHTML = resultado
+    nuevoAtaqueJugador.innerHTML = ataqueJugador
+    nuevoAtaqueEnemigo.innerHTML = ataqueEnemigo
+    //let parrafo = document.createElement("p")
+    //parrafo.innerHTML = "Tu mascota ataco con " + ataqueJugador +  " la mascota del enemigo ataco con " + ataqueEnemigo + " - " + resultado
+
+    ataquesJugador.appendChild(nuevoAtaqueJugador)
+    ataquesEnemigo.appendChild(nuevoAtaqueEnemigo)
+
 }
 
 function crearMensajeFinal(resultadoFinal) {
-    let seccionMensajes = document.getElementById("mensajes")
+    let seccionMensajes = document.getElementById("resultado")
     
-    let parrafo = document.createElement("p")
-    parrafo.innerHTML = resultadoFinal
-
-    seccionMensajes.appendChild(parrafo)
-
+    seccionMensajes.innerHTML = resultadoFinal
     
     let botonFuego = document.getElementById("boton-fuego")
     botonFuego.disabled = true
