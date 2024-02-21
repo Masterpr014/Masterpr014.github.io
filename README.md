@@ -1,2 +1,2 @@
 # Masterpr014.github.io
-Proyecto del Nuevo curso gratis de programacion basica de Platzi
+Host temporal para la pagina de PATU
