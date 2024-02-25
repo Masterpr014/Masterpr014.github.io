@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
     ripple.classList.add("ripple");
     header.appendChild(ripple);
 
-    const size = Math.random() * 50 + 10; // Ajusta el rango del tamaño de las burbujas
+    const size = Math.random() * 50 + 20; // Ajusta el rango del tamaño de las burbujas
     ripple.style.width = `${size}px`;
     ripple.style.height = `${size}px`;
 

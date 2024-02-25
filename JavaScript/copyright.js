@@ -1,3 +1,4 @@
+
 document.getElementById('copyright').style.opacity = '1'; 
 
 document.body.addEventListener('mouseover', function (event) {

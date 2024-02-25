@@ -1,5 +1,7 @@
+/*Hecho Por yo UwU */
+
 header {
-  background-image: url('rlv.png'); 
+  background-image: url('/Img/rlv.png'); 
   position: relative;
   color: #fff;  
   overflow: hidden;
@@ -94,6 +96,19 @@ main {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+.info3 {
+    max-width: 400px; 
+    margin-right: 20px;
+    margin-top: 150px;
+    font-family: "Consolas", monospace;
+    max-width: 600px;
+    margin-left: 20px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
 .image-container {
   border: 1px solid #ccc; 
   margin-right: 20px; 
@@ -110,6 +125,14 @@ main {
   height: 250px;
 }
 
+.image-container2 .image2 {
+  border: 1px solid #ccc;
+  margin-left: 20px;
+  margin-top: 150px;
+  border-radius: 10px 10px 10px 10px;
+  height: 250px;
+}
+
 .section1 {
   display: flex;
   justify-content: center;
@@ -119,15 +142,28 @@ main {
   margin-top: -10px;
 }
 
+.section2
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  margin-bottom: 150px; 
+}
+
 .propuestas-column {
   text-align: center;
-  margin-top: 400px;
+  margin-top: 450px;
 }
 
 .propuestas-column p {
   font-weight: bold;
   font-size: 20px; 
-  color: #fff;
+  color: white;
+}
+
+body {
+  background: linear-gradient(50deg, black, gray, black );
 }
 
 
@@ -144,40 +180,36 @@ main {
   font-family: "Consolas", monospace;
 }
 
-.copyright {
-  background-color: #ce6547;
-  color: white;
-  text-align: center;
-  padding: 10px;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  opacity: 0; 
-  transition: opacity 0.3s; 
-}
 
-.copyright:hover {
-  opacity: 1; 
-}
 
-.ripple {
-  position: absolute;
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-  animation: ripple-animation 0.6s linear;
-  pointer-events: none;
-  z-index: 1;
-}
-
-body {
-  /*background-image: url("fondo_provisional.png");
-  background-size: auto;*/
-  background-color: #3e3669;
-}
-
-@keyframes ripple-animation {
-  to {
-    transform: scale(0.1); 
-    opacity: 0;
+  .copyright {
+    background-color: #ce6547;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    opacity: 0; 
+    transition: opacity 0.3s; 
   }
-}
+
+  .copyright:hover {
+    opacity: 1; 
+  }
+
+  .ripple {
+    position: absolute;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    animation: ripple-animation 0.6s linear;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  @keyframes ripple-animation {
+    to {
+      transform: scale(0.1); 
+      opacity: 0;
+    }
+  } 

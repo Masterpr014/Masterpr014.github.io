@@ -1,0 +1,145 @@
+/*Aca le agregamos UwU */
+header {
+  background-image: url('/Img/rlv.png'); 
+  position: relative;
+  color: #fff;  
+  overflow: hidden;
+  padding: 10px;
+  text-align: center;
+  background-position-y: -30px;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 210px;
+  position: relative;
+  overflow: hidden; 
+}
+
+.Castroselacome {
+  width: 250px;
+  align-items: center;
+  height: 150px;
+  word-wrap: break-word;
+  margin-bottom: 15px;
+  resize: none;
+}
+
+fieldset { 
+  /*Por que no mueveds*/
+  padding: 10px;
+    margin-top: 10px;
+    color: white;
+    margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 230px;
+    height: 420px; /*ok*/
+    background: linear-gradient(70deg, #00358a, #b88400 ) 
+    
+}
+
+form {
+  display: flex; /*si xd*/ /*por el efecto de desenfoque*/
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  
+}
+
+body {
+  background: linear-gradient(50deg, black, gray, black ); /*pera xd*/
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center; 
+  background-color: #ce6547; 
+  padding: 10px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 5px;
+  position: relative; 
+
+
+  transition: color 0.3s, background-color 0.3s;
+}
+
+nav a:hover {
+    color: #ffdb58; 
+    background-color: transparent; 
+}
+
+nav:hover {
+  background-color: #b03820;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #ffdb58; 
+  transform: scaleX(0);
+  transform-origin: bottom right; 
+  transition: transform 0.3s; 
+}
+
+nav a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left; 
+}
+
+.PATU_title {
+  color: #ce6547;
+  font-family: "Consolas", monospace;
+  font-size: 49px;
+  font-weight: 1500;
+  text-align: center;
+}
+
+.RLV_title {
+  font-size: 32px;
+  font-family: "Consolas", monospace;
+}
+
+.copyright {
+  background-color: #ce6547;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  opacity: 0; 
+  transition: opacity 0.3s; 
+}
+
+.ripple {
+  position: absolute;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  animation: ripple-animation 0.6s linear;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.copyright:hover { /*se supone q si*/
+  opacity: 1; 
+}
+
+@keyframes ripple-animation {
+  to {
+    transform: scale(0.1); 
+    opacity: 0;
+  }
+} 
+
+  /*No aparece la imagen es sin la ? / */
