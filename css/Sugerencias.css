@@ -1,4 +1,12 @@
 /*Aca le agregamos UwU */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(70deg, black, gray, black ); /*pera xd*/
+  background-attachment: fixed;
+}
+
 header {
   background-image: url('/Img/rlv.png'); 
   position: relative;
@@ -47,19 +55,52 @@ form {
   
 }
 
-body {
-  background: linear-gradient(50deg, black, gray, black ); /*pera xd*/
+.carousel-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  font-size: 24px;
+  cursor: pointer;
+  
 }
 
-nav {
+.carousel-wrapper {
   display: flex;
-  justify-content: space-around;
-  align-items: center; 
-  background-color: #ce6547; 
+  transition: transform 0.5s ease-in-out;
+  
+}
+
+.carousel-item {
+  min-width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  color: white;
+  
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 24px;
+  color: white;
+  background: #ce6547;
+  border: none;
   padding: 10px;
 }
 
-nav a {
+.prev-btn {
+  left: 0;
+}
+
+.next-btn {
+  right: 0;
+}
+
+a {
   color: white;
   text-decoration: none;
   padding: 10px;
@@ -70,16 +111,13 @@ nav a {
   transition: color 0.3s, background-color 0.3s;
 }
 
-nav a:hover {
+a:hover {
     color: #ffdb58; 
     background-color: transparent; 
 }
 
-nav:hover {
-  background-color: #b03820;
-}
 
-nav a::after {
+a::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -92,7 +130,7 @@ nav a::after {
   transition: transform 0.3s; 
 }
 
-nav a:hover::after {
+a:hover::after {
   transform: scaleX(1);
   transform-origin: bottom left; 
 }

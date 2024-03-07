@@ -1,3 +1,11 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(70deg, black, gray, black ); /*pera xd*/
+  background-attachment: fixed;
+}
+
 header {
     background-image: url("/Img/rlv.png"); 
     position: relative;
@@ -5,7 +13,7 @@ header {
     overflow: hidden;
     padding: 10px;
     text-align: center;
-    background-position-y: -30px;
+    background-position-y: -30px; 
     background-attachment: fixed;
     background-size: cover;
     height: 210px;
@@ -13,19 +21,52 @@ header {
     overflow: hidden; 
   }
 
-  body {
-    background: white
+  .carousel-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    font-size: 24px;
+    cursor: pointer;
+    
   }
-
-  nav {
+  
+  .carousel-wrapper {
     display: flex;
-    justify-content: space-around;
-    align-items: center; 
-    background-color: #ce6547; 
+    transition: transform 0.5s ease-in-out;
+    
+  }
+  
+  .carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    color: white;
+    
+  }
+  
+  .carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 24px;
+    color: white;
+    background: #ce6547;
+    border: none;
     padding: 10px;
   }
   
-  nav a {
+  .prev-btn {
+    left: 0;
+  }
+  
+  .next-btn {
+    right: 0;
+  }/*Crea un arcvhio sql y html*/
+  
+  a {
     color: white;
     text-decoration: none;
     padding: 10px;
@@ -36,16 +77,13 @@ header {
     transition: color 0.3s, background-color 0.3s;
   }
   
-  nav a:hover {
+  a:hover {
       color: #ffdb58; 
       background-color: transparent; 
   }
   
-  nav:hover {
-    background-color: #b03820;
-  }
   
-  nav a::after {
+  a::after {
     content: "";
     position: absolute;
     bottom: 0;
@@ -58,7 +96,7 @@ header {
     transition: transform 0.3s; 
   }
   
-  nav a:hover::after {
+  a:hover::after {
     transform: scaleX(1);
     transform-origin: bottom left; 
   }
@@ -107,3 +145,75 @@ header {
       opacity: 0;
     }
   }
+
+  .calendario-anual {
+    max-width: 900px;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .mes {
+    flex: 1 0 30%;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .mes-header {
+    padding: 10px;
+    font-weight: bold;
+    text-align: center;
+    background-color: #f0f0f0;
+  }
+  
+  .dias-semana {
+    display: flex;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .dia {
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  .dias-mes {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+  }
+  
+  .dia-mes {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ccc;
+    cursor: pointer;
+  }
+  
+  .dia-mes:hover {
+    background-color: #f0f0f0;
+  }
+
+  .dia-mes.pasado {
+    background-color: grey; 
+    color: white;
+}
+
+.dia-mes.futuro {
+    background-color: black; 
+    color: white;
+}
+.dia-mes.hoy {
+  background-color: black;
+  color: white; 
+}
+
+.anotacion-cuadro {
+  background-color: #ce6547; /* Puedes personalizar el color del cuadro de anotaciones */
+  color: white; /* Puedes personalizar el color del texto en el cuadro de anotaciones */
+  padding: 5px;
+  border-radius: 5px;
+  margin-top: 3px;
+}

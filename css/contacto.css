@@ -1,3 +1,25 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-attachment: fixed;
+  background-color: darkcyan;
+}
+
+.RLV {
+  width: 150px;
+}
+
+.PatuIG {
+  width: 150px;
+}
+
+#programadores {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 header {
     background-image: url("/Img/rlv.png"); 
     position: relative;
@@ -11,70 +33,152 @@ header {
     height: 210px;
     position: relative;
     overflow: hidden; 
-  }
+}
 
-  body {
-    background: white
-  }
+#castroselacome {
+  place-content: center;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
 
-  nav {
-    display: flex;
-    justify-content: space-around;
-    align-items: center; 
-    background-color: #ce6547; 
-    padding: 10px;
-  }
+#progam_title {
+  width: 120px;
+}
+
+#margineado {
+  margin-right: 50px;
+
+}
+
+.carousel-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  font-size: 24px;
+  cursor: pointer;
   
-  nav a {
-    color: white;
-    text-decoration: none;
-    padding: 10px;
-    border-radius: 5px;
-    position: relative; 
+}
+
+.carousel-wrapper {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
   
+}
+
+.carousel-item {
+  min-width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  color: white;
   
-    transition: color 0.3s, background-color 0.3s;
-  }
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 24px;
+  color: white;
+  background: #ce6547;
+  border: none;
+  padding: 10px;
+}
+
+#carouselWrapper {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.prev-btn {
+  left: 0;
+}
+
+.next-btn {
+  right: 0;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 5px;
+  position: relative; 
+  transition: color 0.3s, background-color 0.3s;
+}
+
+a:hover {
+  color: #ffdb58; 
+  background-color: transparent; 
+}
+
+a::after {  
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #ffdb58; 
+  transform: scaleX(0);
+  transform-origin: bottom right; 
+  transition: transform 0.3s; 
+}
+
+a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left; 
+}
+
+.PATU_title {
+  color: #ce6547;
+  font-family: "Consolas", monospace;
+  font-size: 49px;
+  font-weight: 1500;
+  text-align: center;
+}
+
+.RLV_title {
+  font-size: 32px;
+  font-family: "Consolas", monospace;
+}
+
+.castroxcindy {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+
+}
+
+.foto_de_perfil {
+  border-radius: 75px;
+  height: 50px
   
-  nav a:hover {
-      color: #ffdb58; 
-      background-color: transparent; 
-  }
-  
-  nav:hover {
-    background-color: #b03820;
-  }
-  
-  nav a::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background-color: #ffdb58; 
-    transform: scaleX(0);
-    transform-origin: bottom right; 
-    transition: transform 0.3s; 
-  }
-  
-  nav a:hover::after {
-    transform: scaleX(1);
-    transform-origin: bottom left; 
-  }
-  
-  .PATU_title {
-    color: #ce6547;
-    font-family: "Consolas", monospace;
-    font-size: 49px;
-    font-weight: 1500;
-    text-align: center;
-  }
-  
-  .RLV_title {
-    font-size: 32px;
-    font-family: "Consolas", monospace;
-  }
+}
+
+#alcalde {
+  display: flex;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-right: 50px;
+}
+
+.candidatos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.perfil {
+  display: flex;
+  align-items: center;
+}
   
   .copyright {
     background-color: #ce6547;

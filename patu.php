@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>☆🦆*PATU*🦆☆ (@patu_rlv)</title>
+  <title>☆🦆*PATU*🦆☆ (@patu_rlv)</title> 
   <link rel="stylesheet" href="css/patu.css">
   <link rel="icon" type="image/icon" href="patu.ico">
   <script src="JavaScript/copyright.js" defer></script>
   <script src="JavaScript/waterEffect.js" defer></script>
 </head>
 <body>
-
+<!--crea un nuevo documento en patu que se llame patu1.html -->
   <header>
       <h1 class="PATU_title">PATU</h1>
     <h2 class="RLV_title">IE "Romeo Luna Victoria" #7089</h2>
